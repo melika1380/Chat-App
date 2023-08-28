@@ -1,0 +1,43 @@
+$color_1: #c0c0c0;
+footer {
+  text-align: center;
+
+  margin: 35px;
+  position: fixed;
+  bottom: 0;
+}
+.footer {
+  .footer-box {
+    padding: 1rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    .input-box {
+      width: 56%;
+      padding: 2rem;
+      background: #fff;
+      border: none;
+      display: flex;
+      border-radius: 3rem;
+      padding: 0rem 1rem;
+      justify-content: space-between;
+    }
+  }
+}
+input {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+}
+input:active{
+  border: none;
+}
+button {
+  border: none;
+  background: transparent;
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

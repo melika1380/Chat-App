@@ -1,0 +1,38 @@
+$color_1: #1a1a1a;
+
+header {
+  display: flex;
+  align-items: flex-start;
+  color: #ffffff;
+  .profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    img {
+      height: 3rem;
+      width: 3rem;
+      border: none;
+      border-radius: 2rem;
+    }
+    .file {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}
+.header {
+  padding: 1rem 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Paper-clip{
+  width: 2rem;
+  height: 2rem;
+}
+.poins{
+  width: 2rem;
+  height: 2rem;
+}
