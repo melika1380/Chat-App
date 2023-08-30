@@ -16,7 +16,6 @@ header {
     }
     .file {
       display: flex;
-      gap: 1rem;
       align-items: center;
     }
   }
@@ -28,11 +27,11 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.Paper-clip{
+.Paper-clip {
   width: 2rem;
   height: 2rem;
 }
-.poins{
-  width: 2rem;
-  height: 2rem;
+.dot {
+  width: 2.2rem;
+  height: 2.5rem;
 }
