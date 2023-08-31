@@ -2,33 +2,41 @@ import html from "./index.html";
 import "./index.scss";
 
 function loaderPage() {
-  const chatBox = document.querySelector(".one");
-  const chatServerBox = document.querySelector(".two");
-  const messageInput = document.querySelector(".input");
-  const sendButton = document.querySelector(".button");
-
-  const ws = new WebSocket("ws://localhost:3000"); 
-
-
-  ws.addEventListener("open", (event) => {
-    console.log("WebSocket connection established.");
+  const socket = new WebSocket("wss://ws.postman-echo.com/raw");
+  const btnInput = document.querySelector(".button");
+  socket.addEventListener("open", (event) => {
+    console.log("connecting", event);
   });
 
-
-  ws.addEventListener("message", (event) => {
-    const message = event.data;
-    chatServerBox.innerHTML += `<li>${message}</li>`;
-    chatServerBox.scrollTop = chatBox.scrollHeight;
+  socket.addEventListener("message", (event) => {
+    const messagesContainer = document.querySelector(".one");
+    const messageElement = document.createElement("li");
+    messageElement.textContent = event.data;
+    messagesContainer.appendChild(messageElement);
   });
 
-  
-  sendButton.addEventListener("click", () => {
+  btnInput.addEventListener("click", () => {
+    const messageInput = document.querySelector(".input");
     const message = messageInput.value;
-    chatBox.innerHTML += `<li>${message}</li>`;
-    chatBox.scrollTop = chatBox.scrollHeight;
-    ws.send(message); 
-    messageInput.value = ""; 
+
+    if (message.trim() !== "") {
+      socket.send(message);
+      const messagesContainer = document.querySelector(".two");
+      const userMessageElement = document.createElement("li");
+      userMessageElement.textContent = message;
+      messagesContainer.appendChild(userMessageElement);
+
+      messageInput.value = "";
+    }
   });
+  btnInput.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      sendMessage();
+      event.preventDefault(); 
+    }
+  });
+  
+
 }
 window.addEventListener("load", loaderPage);
 

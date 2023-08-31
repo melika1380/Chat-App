@@ -4,19 +4,21 @@ $color_1: #1a1a1a;
   overflow-y: auto;
   margin: 1rem;
   display: flex;
+  align-items: flex-end;
 }
 ul{
   display: flex;
+  gap:0 8rem;
   flex-direction: column;
 }
 .one{
-  margin: 4rem 0;
   li{
     display: flex;
     justify-content: flex-start;
   }
 }
 .two{
+  margin: 4rem 0;
   li{
     display: flex;
     justify-content: flex-end;
