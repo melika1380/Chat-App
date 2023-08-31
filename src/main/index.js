@@ -2,32 +2,33 @@ import html from "./index.html";
 import "./index.scss";
 
 function loaderPage() {
-  
-const socket = new WebSocket(
-  "ws://localhost:8080"
-);
-
-  const chatMessages = document.querySelector(".shopping-list");
+  const chatBox = document.querySelector(".one");
+  const chatServerBox = document.querySelector(".two");
   const messageInput = document.querySelector(".input");
   const sendButton = document.querySelector(".button");
 
-  socket.addEventListener("open", (event) => {
-    console.log("Connected to the server");
+  const ws = new WebSocket("ws://localhost:3000"); 
 
-    sendButton.addEventListener("click", () => {
-      const message = messageInput.value;
-      socket.send(message);
-      messageInput.value = "";
-    });
+
+  ws.addEventListener("open", (event) => {
+    console.log("WebSocket connection established.");
   });
 
-  socket.addEventListener("message", (event) => {
+
+  ws.addEventListener("message", (event) => {
     const message = event.data;
-    const messageElement = document.createElement("li");
-    messageElement.textContent = message;
-    chatMessages.appendChild(messageElement);
+    chatServerBox.innerHTML += `<li>${message}</li>`;
+    chatServerBox.scrollTop = chatBox.scrollHeight;
   });
 
+  
+  sendButton.addEventListener("click", () => {
+    const message = messageInput.value;
+    chatBox.innerHTML += `<li>${message}</li>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+    ws.send(message); 
+    messageInput.value = ""; 
+  });
 }
 window.addEventListener("load", loaderPage);
 
