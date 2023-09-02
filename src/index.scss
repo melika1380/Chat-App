@@ -16,31 +16,23 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
+  height: 100vh;
   flex-direction: column;
-}
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  background-image: url("../src/background/night-sky-5120x2880-stars-night-milky-way-mountains-land-419\ \(2\).jpg");
+  }
 main {
   justify-content: flex-start;
   padding: 2rem 0;
   display: flex;
   flex-direction: column-reverse;
-
   height: 32rem;
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
 }
-.bg-img {
-  background-image: url("../src/background/night-sky-5120x2880-stars-night-milky-way-mountains-land-419\ \(2\).jpg");
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  width: 100vw;
-  z-index: -1;
-}
+
 
 @media (min-width: 900px) {
   main {

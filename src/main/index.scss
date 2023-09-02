@@ -1,6 +1,6 @@
 .main {
-  gap: 2rem;
-  width: 64%;
+ // gap: 2rem;
+  width: 95%;
   margin: 1rem;
   display: flex;
   justify-content: space-between;
@@ -8,19 +8,19 @@
 }
 ul {
   display: flex;
-  gap: 0 8rem;
+  padding: 2rem 0.5rem;
   flex-direction: column;
   justify-content: flex-start;
 }
-.one {
-  margin: -3rem -6rem -3rem 0;
+.two {
+  margin: -3rem 0rem -3rem 0;
   li {
     display: flex;
     justify-content: flex-start;
     background: #73b0e6;
   }
 }
-.two {
+.one {
   margin: 0.75rem 0;
   li {
     display: flex;
@@ -28,7 +28,7 @@ ul {
   }
 }
 li {
-  margin: 2.5rem;
+ margin: 2.5rem 0rem;
   word-break: break-all;
   background: #e9edef;
   border: none;
@@ -37,11 +37,13 @@ li {
 }
 
 @media (min-width: 900px) {
-  main {
+  .main {
+    width: 56%;
   }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 666px) {
-  main {
+  .main {
+    width: 56%;
   }
 }
