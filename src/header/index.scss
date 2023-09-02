@@ -1,5 +1,3 @@
-$color_1: #1a1a1a;
-
 header {
   display: flex;
   align-items: flex-start;
@@ -17,6 +15,9 @@ header {
     .file {
       display: flex;
       align-items: center;
+    }
+    p {
+      text-transform: capitalize;
     }
   }
 }

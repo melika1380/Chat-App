@@ -2,8 +2,6 @@ $color_1: #c0c0c0;
 footer {
   position: fixed;
   bottom: 0;
- // background-image: url("../background/3632097.jpg");
-
 }
 .footer {
   display: flex;
@@ -33,8 +31,8 @@ input {
   background: transparent;
 }
 input:focus {
-  outline: none; 
-  border: none; 
+  outline: none;
+  border: none;
 }
 
 button {
@@ -43,5 +41,20 @@ button {
   img {
     width: 1.5rem;
     height: 1.5rem;
+  }
+}
+@media (min-width: 900px) {
+  .footer {
+    .footer-box {
+      width: 64%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 666px) {
+  .footer {
+    .footer-box {
+      width: 64%;
+    }
   }
 }

@@ -1,43 +1,48 @@
 import html from "./index.html";
 import "./index.scss";
+import { getName } from "../header/index";
 
 function loaderPage() {
+
   const socket = new WebSocket("wss://ws.postman-echo.com/raw");
   const btnInput = document.querySelector(".button");
-  socket.addEventListener("open", (event) => {
-    console.log("connecting", event);
-  });
+  const userInput = document.querySelector(".input");
 
-  socket.addEventListener("message", (event) => {
+  function statueSocket(event) {
+    console.log("connecting", event);
+  }
+  socket.addEventListener("open", statueSocket);
+
+  function messageSocket(event) {
     const messagesContainer = document.querySelector(".one");
     const messageElement = document.createElement("li");
     messageElement.textContent = event.data;
     messagesContainer.appendChild(messageElement);
-  });
+  }
+  socket.addEventListener("message", messageSocket);
 
-  btnInput.addEventListener("click", () => {
-    const messageInput = document.querySelector(".input");
-    const message = messageInput.value;
-
+  function sendMessage() {
+    const userInput = document.querySelector(".input");
+    const message = userInput.value;
     if (message.trim() !== "") {
       socket.send(message);
       const messagesContainer = document.querySelector(".two");
       const userMessageElement = document.createElement("li");
       userMessageElement.textContent = message;
       messagesContainer.appendChild(userMessageElement);
-
-      messageInput.value = "";
+      userInput.value = "";
     }
-  });
-  btnInput.addEventListener("keyup", (event) => {
+  }
+  btnInput.addEventListener("click", sendMessage);
+
+  function enterClick(event) {
     if (event.key === "Enter") {
       sendMessage();
-      event.preventDefault(); 
     }
-  });
-  
-
+  }
+  userInput.addEventListener("keyup", enterClick);
 }
+
 window.addEventListener("load", loaderPage);
 
 export default html;

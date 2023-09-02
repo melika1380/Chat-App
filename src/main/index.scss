@@ -1,34 +1,47 @@
-$color_1: #1a1a1a;
-.main{
-  height: 31rem;
-  overflow-y: auto;
+.main {
+  gap: 2rem;
+  width: 64%;
   margin: 1rem;
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
 }
-ul{
+ul {
   display: flex;
-  gap:0 8rem;
+  gap: 0 8rem;
   flex-direction: column;
+  justify-content: flex-start;
 }
-.one{
-  li{
+.one {
+  margin: -3rem -6rem -3rem 0;
+  li {
     display: flex;
     justify-content: flex-start;
+    background: #73b0e6;
   }
 }
-.two{
-  margin: 4rem 0;
-  li{
+.two {
+  margin: 0.75rem 0;
+  li {
     display: flex;
     justify-content: flex-end;
   }
 }
-li{
-  margin: 1rem;
-  width: 19rem;
+li {
+  margin: 2.5rem;
+  word-break: break-all;
   background: #e9edef;
   border: none;
   border-radius: 2rem;
-  padding: 0.7rem;
+  padding: 0.7rem 1.5rem;
+}
+
+@media (min-width: 900px) {
+  main {
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 666px) {
+  main {
+  }
 }
