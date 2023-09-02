@@ -21,18 +21,18 @@ body {
   background-size: cover;
   backdrop-filter: blur(4px);
   background-image: url("../src/background/night-sky-5120x2880-stars-night-milky-way-mountains-land-419\ \(2\).jpg");
-  }
+}
 main {
   justify-content: flex-start;
   padding: 2rem 0;
   display: flex;
   flex-direction: column-reverse;
   height: 32rem;
+  margin: 1rem;
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
 }
-
 
 @media (min-width: 900px) {
   main {
@@ -48,8 +48,5 @@ main {
   main {
     width: 100vw;
     height: 36rem;
-  }
-  header {
-    width: 64%;
   }
 }
