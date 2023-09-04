@@ -32,15 +32,15 @@ main {
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
+  width: 100vw;
 }
-
+header{
+  width: 100vw;
+}
 @media (min-width: 900px) {
   main {
     width: 100vw;
     height: 36rem;
-  }
-  header {
-    width: 64%;
   }
 }
 

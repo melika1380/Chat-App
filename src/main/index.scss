@@ -2,32 +2,29 @@
   width: 95%;
   margin: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
 }
 ul {
-  display: flex;
+//  display: flex;
   padding: 2rem 0.5rem;
   flex-direction: column;
   justify-content: flex-start;
 }
 .two {
-  margin: -3rem 0rem -3rem 0;
+  margin-bottom: -3rem ;
   li {
-    display: flex;
-    justify-content: flex-start;
     background: #73b0e6;
   }
 }
 .one {
-  margin: 0.75rem 0;
   li {
-    display: flex;
-    justify-content: flex-end;
   }
 }
 li {
-  margin: 2.5rem 0rem;
+  cursor: context-menu;
+  list-style-type: none;
+  margin-top: 3rem;
   word-break: break-all;
   background: #e9edef;
   border: none;
