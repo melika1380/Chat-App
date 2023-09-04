@@ -12,16 +12,21 @@ ul {
   justify-content: flex-start;
 }
 .two {
+  display: flex;
+  align-items: flex-end;
   margin-bottom: -3rem ;
   li {
     background: #73b0e6;
   }
 }
 .one {
+  display: flex;
+  align-items: flex-start;
   li {
   }
 }
 li {
+  width: fit-content;
   cursor: context-menu;
   list-style-type: none;
   margin-top: 3rem;
