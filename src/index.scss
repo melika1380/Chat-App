@@ -27,7 +27,6 @@ main {
   justify-content: flex-start;
   display: flex;
   flex-direction: column-reverse;
-  margin: 1rem;
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
@@ -43,9 +42,17 @@ header{
   main {
     width: 100vw;
   }
+  header{
+    width: 65%;
+    margin: 0 -14rem;
+  }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 666px) {
+  header{
+    width: 65%;
+    margin: 0 -14rem;
+  }
   main {
     width: 100vw;
   }
