@@ -3,9 +3,9 @@
   margin: 1rem;
 }
 ul {
-  margin-bottom: 2rem 1rem;
+  margin-bottom: 2rem;
   display: flex;
-  padding: 2rem 0.5rem;
+  padding: 1rem 0.5rem;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -21,7 +21,7 @@ li {
   width: fit-content;
   cursor: context-menu;
   list-style-type: none;
-  margin-top: 3rem;
+  margin-bottom: 0.5rem;
   word-break: break-all;
   border: none;
   border-radius: 2rem;
