@@ -12,10 +12,11 @@ function loaderPage() {
     socket.addEventListener("open", statueSocket);
 
     function messageSocket(event) {
-      const messagesContainer = document.querySelector(".two");
+      const messagesContainer = document.querySelector(".shopping-list");
       const messageElement = document.createElement("li");
+      messageElement.className="one";
       messageElement.textContent = event.data;
-      messagesContainer.appendChild(messageElement);
+      messagesContainer.append(messageElement);
     }
     socket.addEventListener("message", messageSocket);
 
@@ -24,10 +25,11 @@ function loaderPage() {
       const message = userInput.value;
       if (message.trim() !== "") {
         socket.send(message);
-        const messagesContainer = document.querySelector(".one");
+        const messagesContainer = document.querySelector(".shopping-list");
         const userMessageElement = document.createElement("li");
+        userMessageElement.className="two";
         userMessageElement.textContent = message;
-        messagesContainer.appendChild(userMessageElement);
+        messagesContainer.append(userMessageElement);
         userInput.value = "";
       }
     }

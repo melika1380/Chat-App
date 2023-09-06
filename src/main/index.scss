@@ -1,29 +1,20 @@
 .main {
   width: 95%;
   margin: 1rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 ul {
-//  display: flex;
+  display: flex;
   padding: 2rem 0.5rem;
+  justify-content: space-between;
   flex-direction: column;
-  justify-content: flex-start;
 }
 .two {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: -3rem ;
-  li {
-    background: #73b0e6;
+    background: #597894;
+    margin-inline-end: auto;
   }
-}
 .one {
-  display: flex;
-  align-items: flex-start;
-  li {
-  }
+    background: #e9edef;
+    margin-inline-start: auto;
 }
 li {
   width: fit-content;
@@ -31,7 +22,6 @@ li {
   list-style-type: none;
   margin-top: 3rem;
   word-break: break-all;
-  background: #e9edef;
   border: none;
   border-radius: 2rem;
   padding: 0.7rem 1.5rem;
